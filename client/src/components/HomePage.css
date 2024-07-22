@@ -1,12 +1,14 @@
+/* Global Styles */
 body, html {
     margin: 0;
     padding: 0;
-    background: url('./WhatsApp\ Image\ 2024-07-17\ at\ 2.21.14\ PM.jpeg') no-repeat center center fixed; /* Replace with your actual image path */
+    background: url('./WhatsApp Image 2024-07-17 at 2.21.14 PM.jpeg') no-repeat center center fixed; /* Replace with your actual image path */
     background-size: cover;
     height: 100%;
     color: #fff; /* Text color */
 }
 
+/* Home Page Styles */
 .home-page {
     display: flex;
     flex-direction: column;
@@ -26,14 +28,23 @@ body, html {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
 }
 
+/* Cards Container Styles */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Card Styles */
 .card {
     background-color: rgba(255, 255, 255, 0.1); /* Light white with transparency */
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 30px; /* Increase padding for larger content area */
     margin: 20px;
-    width: 80%;
-    max-width: 600px;
+    width: 90%; /* Increase width */
+    max-width: 800px; /* Increase max-width */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: #f0f0f0; /* Ensure card text color is lighter */
 }
@@ -43,23 +54,26 @@ body, html {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
 }
 
+/* Card Titles and Text */
 .card h2 {
     color: #f0f0f0; /* Slightly lighter text color */
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 28px; /* Increase font size */
+    font-weight: bold; /* Make the title bold */
+    margin-bottom: 15px; /* Increase margin-bottom */
 }
 
 .card p {
     color: #ddd; /* Slightly lighter text color */
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 18px; /* Increase font size */
+    line-height: 1.8; /* Increase line-height */
 }
 
+/* Button Styles */
 .card button {
     background-color: #f0f0f0;
     color: #333;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Increase padding */
     margin-top: 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -69,4 +83,62 @@ body, html {
 .card button:hover {
     background-color: #333;
     color: #f0f0f0;
+}
+
+/* Collapsible Sections */
+.section {
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.section h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #f0f0f0;
+}
+
+.section-content {
+    display: none;
+    padding: 10px 0;
+}
+
+.section-content.expanded {
+    display: block;
+}
+
+/* Fun Facts Container */
+.fun-facts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Fun Fact Card Styles */
+.fun-fact-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Light white with transparency */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #f0f0f0;
+}
+
+.fun-fact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.fun-fact-card h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #f0f0f0;
+}
+
+.fun-fact-card p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.6;
 }

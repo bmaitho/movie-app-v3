@@ -43,8 +43,9 @@
     height: auto;
     border-radius: 8px;
     flex-grow: 1; /* Ensure image fills available space */
-    
-    object-position:right;
+    object-position: center;
+    margin-bottom: 15px; /* Add space between the poster and the title */
+    align-self: center; /* Center the poster horizontally */
 }
 
 .movie-card h2 {

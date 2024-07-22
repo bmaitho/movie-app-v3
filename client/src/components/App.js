@@ -1,6 +1,5 @@
-// src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect, useHistory } from 'react-router-dom';
 import NavBar from './NavBar';
 import HomePage from './HomePage';
 import MoviePage from './MoviePage';
@@ -14,6 +13,14 @@ import { AuthProvider } from '../AuthContext';
 import PrivateRoute from '../PrivateRoute';
 
 const App = () => {
+    const history = useHistory();
+
+    useEffect(() => {
+        if (window.location.pathname === '/') {
+            history.push('/');
+        }
+    }, [history]);
+
     return (
         <AuthProvider>
             <Router>
@@ -27,7 +34,7 @@ const App = () => {
                     <PrivateRoute path="/reviews/:movieId" component={ReviewPage} />
                     <PrivateRoute path="/reviews/all" component={AllReviewsPage} />
                     <PrivateRoute path="/profile" component={ProfilePage} />
-                    <Redirect to="/login" />
+                    <Redirect to="/" />  {/* Redirect all unmatched routes to the home page */}
                 </Switch>
             </Router>
         </AuthProvider>
